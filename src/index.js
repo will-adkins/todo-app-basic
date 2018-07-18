@@ -4,6 +4,14 @@ import Component from '@reactions/component'
 import App from './app'
 
 ReactDOM.render(
-  <Component initialState={{count: 0}}>
+  <Component
+    initialState={{
+      todos: [{ id: 1, desc: 'MILK!', completed: false }],
+      isFilterComplete: false,
+      isFilterIncomplete: false
+    }}
+  >
     {App}
-  </Component>, document.getElementById('app'))
+  </Component>,
+  document.getElementById('app')
+)
